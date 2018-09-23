@@ -12,6 +12,7 @@ class ChildCareViewController: UIViewController {
 
     @IBOutlet weak var containerViewA: UIView!
     @IBOutlet weak var containerViewB: UIView!
+    @IBOutlet weak var segmentedControl:UISegmentedControl!
     
     @IBAction func showComponent(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -31,6 +32,7 @@ class ChildCareViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        segmentedControl.tintColor = .white
     }
     
 

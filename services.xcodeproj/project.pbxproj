@@ -26,6 +26,21 @@
 		7678CD492157084000BBA08C /* UnderConstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD482157084000BBA08C /* UnderConstructionViewController.swift */; };
 		7678CD4A2157084000BBA08C /* UnderConstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD482157084000BBA08C /* UnderConstructionViewController.swift */; };
 		7678CD4B2157084000BBA08C /* UnderConstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD482157084000BBA08C /* UnderConstructionViewController.swift */; };
+		7678CD4D21574F3A00BBA08C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD4C21574F3A00BBA08C /* MapViewController.swift */; };
+		7678CD4E21574F3A00BBA08C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD4C21574F3A00BBA08C /* MapViewController.swift */; };
+		7678CD4F21574F3A00BBA08C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD4C21574F3A00BBA08C /* MapViewController.swift */; };
+		7678CD5121574F5000BBA08C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD5021574F5000BBA08C /* ListViewController.swift */; };
+		7678CD5221574F5000BBA08C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD5021574F5000BBA08C /* ListViewController.swift */; };
+		7678CD5321574F5000BBA08C /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD5021574F5000BBA08C /* ListViewController.swift */; };
+		7678CD55215752ED00BBA08C /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD54215752ED00BBA08C /* ArtWork.swift */; };
+		7678CD56215752ED00BBA08C /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD54215752ED00BBA08C /* ArtWork.swift */; };
+		7678CD57215752ED00BBA08C /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD54215752ED00BBA08C /* ArtWork.swift */; };
+		7678CD5A215768EA00BBA08C /* ArtworkMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD59215768EA00BBA08C /* ArtworkMarkerView.swift */; };
+		7678CD5B215768EA00BBA08C /* ArtworkMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD59215768EA00BBA08C /* ArtworkMarkerView.swift */; };
+		7678CD5C215768EA00BBA08C /* ArtworkMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD59215768EA00BBA08C /* ArtworkMarkerView.swift */; };
+		7678CD5E2157752500BBA08C /* ChildCareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD5D2157752500BBA08C /* ChildCareTableViewCell.swift */; };
+		7678CD5F2157752500BBA08C /* ChildCareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD5D2157752500BBA08C /* ChildCareTableViewCell.swift */; };
+		7678CD602157752500BBA08C /* ChildCareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD5D2157752500BBA08C /* ChildCareTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +78,12 @@
 		7678CD3F2156D56F00BBA08C /* ServicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesManager.swift; sourceTree = "<group>"; };
 		7678CD442156F36100BBA08C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		7678CD482157084000BBA08C /* UnderConstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderConstructionViewController.swift; sourceTree = "<group>"; };
+		7678CD4C21574F3A00BBA08C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7678CD5021574F5000BBA08C /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		7678CD54215752ED00BBA08C /* ArtWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtWork.swift; sourceTree = "<group>"; };
+		7678CD582157595000BBA08C /* Toronto.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Toronto.gpx; sourceTree = "<group>"; };
+		7678CD59215768EA00BBA08C /* ArtworkMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkMarkerView.swift; sourceTree = "<group>"; };
+		7678CD5D2157752500BBA08C /* ChildCareTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCareTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +144,12 @@
 				7678CD3F2156D56F00BBA08C /* ServicesManager.swift */,
 				7678CD442156F36100BBA08C /* Service.swift */,
 				7678CD482157084000BBA08C /* UnderConstructionViewController.swift */,
+				7678CD4C21574F3A00BBA08C /* MapViewController.swift */,
+				7678CD5021574F5000BBA08C /* ListViewController.swift */,
+				7678CD54215752ED00BBA08C /* ArtWork.swift */,
+				7678CD582157595000BBA08C /* Toronto.gpx */,
+				7678CD59215768EA00BBA08C /* ArtworkMarkerView.swift */,
+				7678CD5D2157752500BBA08C /* ChildCareTableViewCell.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -277,11 +304,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7678CD3C2156D4A900BBA08C /* ChildCareViewController.swift in Sources */,
+				7678CD55215752ED00BBA08C /* ArtWork.swift in Sources */,
 				7678CD102156B84C00BBA08C /* ViewController.swift in Sources */,
 				7678CD492157084000BBA08C /* UnderConstructionViewController.swift in Sources */,
 				7678CD452156F36100BBA08C /* Service.swift in Sources */,
+				7678CD5A215768EA00BBA08C /* ArtworkMarkerView.swift in Sources */,
 				7678CD0E2156B84C00BBA08C /* AppDelegate.swift in Sources */,
 				7678CD402156D56F00BBA08C /* ServicesManager.swift in Sources */,
+				7678CD5121574F5000BBA08C /* ListViewController.swift in Sources */,
+				7678CD5E2157752500BBA08C /* ChildCareTableViewCell.swift in Sources */,
+				7678CD4D21574F3A00BBA08C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,10 +322,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7678CD412156D56F00BBA08C /* ServicesManager.swift in Sources */,
+				7678CD4E21574F3A00BBA08C /* MapViewController.swift in Sources */,
+				7678CD56215752ED00BBA08C /* ArtWork.swift in Sources */,
 				7678CD4A2157084000BBA08C /* UnderConstructionViewController.swift in Sources */,
 				7678CD462156F36100BBA08C /* Service.swift in Sources */,
+				7678CD5F2157752500BBA08C /* ChildCareTableViewCell.swift in Sources */,
 				7678CD3D2156D4A900BBA08C /* ChildCareViewController.swift in Sources */,
 				7678CD232156B84D00BBA08C /* servicesTests.swift in Sources */,
+				7678CD5B215768EA00BBA08C /* ArtworkMarkerView.swift in Sources */,
+				7678CD5221574F5000BBA08C /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,10 +339,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7678CD422156D56F00BBA08C /* ServicesManager.swift in Sources */,
+				7678CD4F21574F3A00BBA08C /* MapViewController.swift in Sources */,
+				7678CD57215752ED00BBA08C /* ArtWork.swift in Sources */,
 				7678CD4B2157084000BBA08C /* UnderConstructionViewController.swift in Sources */,
 				7678CD472156F36100BBA08C /* Service.swift in Sources */,
+				7678CD602157752500BBA08C /* ChildCareTableViewCell.swift in Sources */,
 				7678CD3E2156D4A900BBA08C /* ChildCareViewController.swift in Sources */,
 				7678CD2E2156B84D00BBA08C /* servicesUITests.swift in Sources */,
+				7678CD5C215768EA00BBA08C /* ArtworkMarkerView.swift in Sources */,
+				7678CD5321574F5000BBA08C /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

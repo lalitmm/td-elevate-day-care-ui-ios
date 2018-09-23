@@ -25,7 +25,7 @@ class ViewController: UICollectionViewController {
 
     @IBOutlet var imageView: UIImageView!
     
-    var services:[Service]?
+    var services: [Service] = []
     
     let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
     
@@ -39,7 +39,7 @@ class ViewController: UICollectionViewController {
         self.collectionView?.collectionViewLayout = layout
         
         ServicesManager.shared.getServices { (services, error) in
-            self.services = services
+            self.services = services!
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
@@ -53,7 +53,7 @@ class ViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.services?.count ?? 0;
+        return self.services.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -70,21 +70,18 @@ class ViewController: UICollectionViewController {
     //MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let indexP = self.collectionView.indexPathsForSelectedItems
         if indexPath.row == 0 {
             let childCareViewController = storyBoard.instantiateViewController(withIdentifier: "childCareView") as! ChildCareViewController
-            childCareViewController.title = self.services![indexP?[0].row ?? 0].name
+            childCareViewController.title = self.services[indexPath.row].name
             self.navigationController?.pushViewController(childCareViewController, animated: true)
         }else {
             let underConstructionViewController = storyBoard.instantiateViewController(withIdentifier: "underConstructionView") as! UnderConstructionViewController
-            underConstructionViewController.title = self.services![indexP?[0].row ?? 0].name
+            underConstructionViewController.title = self.services[indexPath.row].name
             self.navigationController?.pushViewController(underConstructionViewController, animated: true)
         }
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        
+        self.collectionView.deselectItem(at: indexPath, animated: false)
     }
     
     func collectionView(collectionView: UICollectionView,
@@ -112,8 +109,7 @@ class ViewController: UICollectionViewController {
         cell.layer.masksToBounds = true
         cell.backgroundColor = UIColor(displayP3Red: 42/255.0, green: 86/255.0, blue: 130/255.0, alpha: 1.0)
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: layout.itemSize.width, height: layout.itemSize.height))
-        label.text = self.services![forItemAtIndexPath.item].name
-            //ServicesManager.shared.requestForServices()[forItemAtIndexPath.item]
+        label.text = self.services[forItemAtIndexPath.item].name
         label.textAlignment = .center
         label.textColor = .white
         label.numberOfLines = 0

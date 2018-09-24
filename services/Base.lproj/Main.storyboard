@@ -17,55 +17,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kda-Zw-MuX">
-                                <rect key="frame" x="0.0" y="20" width="375" height="47"/>
-                                <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4kE-xU-SZv">
-                                        <rect key="frame" x="127" y="9" width="121" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <segments>
-                                            <segment title="Map"/>
-                                            <segment title="List"/>
-                                        </segments>
-                                        <connections>
-                                            <action selector="showComponentWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="F9f-mv-qlP"/>
-                                        </connections>
-                                    </segmentedControl>
-                                </subviews>
-                                <color key="backgroundColor" red="0.1647058824" green="0.33725490200000002" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGZ-Do-mpy">
-                                <rect key="frame" x="0.0" y="66" width="375" height="601"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="ALz-jQ-2Du" kind="embed" id="4M6-YK-fxU"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fs0-bh-N9B">
-                                <rect key="frame" x="0.0" y="66" width="375" height="601"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="REa-Oy-Bhf" kind="embed" id="5jl-YI-F7u"/>
                                 </connections>
                             </containerView>
+                            <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kda-Zw-MuX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="47"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Za9-o3-cSM"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4kE-xU-SZv">
+                                <rect key="frame" x="146" y="73" width="83" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="1ZH-lJ-JLT"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Map"/>
+                                    <segment title="List"/>
+                                </segments>
+                                <connections>
+                                    <action selector="showComponentWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="F9f-mv-qlP"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Fs0-bh-N9B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3I3-pL-Exx"/>
-                            <constraint firstItem="BGZ-Do-mpy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="Dv5-QE-9re"/>
-                            <constraint firstItem="kda-Zw-MuX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GNG-dD-xN4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kda-Zw-MuX" secondAttribute="bottom" constant="600" id="HLd-3p-B6j"/>
-                            <constraint firstItem="Fs0-bh-N9B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="LZC-NX-mWS"/>
+                            <constraint firstItem="kda-Zw-MuX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Baj-FY-fqq"/>
+                            <constraint firstItem="BGZ-Do-mpy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dv5-QE-9re"/>
+                            <constraint firstItem="4kE-xU-SZv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gnt-rD-m8e"/>
+                            <constraint firstItem="Fs0-bh-N9B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LZC-NX-mWS"/>
+                            <constraint firstItem="kda-Zw-MuX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PS7-Gy-P1V"/>
                             <constraint firstItem="Fs0-bh-N9B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UI1-g1-IoD"/>
                             <constraint firstItem="BGZ-Do-mpy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a6v-j3-BWy"/>
+                            <constraint firstItem="4kE-xU-SZv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="c8j-R1-OWZ"/>
                             <constraint firstItem="BGZ-Do-mpy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dwj-t2-jkH"/>
+                            <constraint firstItem="kda-Zw-MuX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jvU-Um-XqG"/>
                             <constraint firstItem="Fs0-bh-N9B" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kFW-TH-l61"/>
-                            <constraint firstItem="kda-Zw-MuX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qMi-lr-P1U"/>
                             <constraint firstItem="BGZ-Do-mpy" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="t21-kB-cT3"/>
-                            <constraint firstItem="kda-Zw-MuX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zan-T3-uTl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="containerViewA" destination="BGZ-Do-mpy" id="sOM-mJ-Kzr"/>
                         <outlet property="containerViewB" destination="Fs0-bh-N9B" id="Ean-7f-VRF"/>
@@ -83,7 +88,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eCx-kd-67F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aR8-5K-wbZ">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -94,16 +99,7 @@
                             <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="xWp-bH-x1d">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="oPg-5h-tAO" id="lEB-ej-atc"/>
                             <outlet property="delegate" destination="oPg-5h-tAO" id="p7J-7t-a3L"/>
@@ -155,11 +151,11 @@
             <objects>
                 <viewController id="ALz-jQ-2Du" customClass="MapViewController" customModule="services" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jCM-nD-lH7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="601"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w1P-Em-FVg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="601"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -169,6 +165,7 @@
                             <constraint firstAttribute="bottom" secondItem="w1P-Em-FVg" secondAttribute="bottom" id="IDa-uK-4PL"/>
                             <constraint firstAttribute="trailing" secondItem="w1P-Em-FVg" secondAttribute="trailing" id="zUz-WW-36S"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="RzO-7A-hih"/>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="w1P-Em-FVg" id="db6-5R-7wV"/>
@@ -183,11 +180,11 @@
             <objects>
                 <viewController id="REa-Oy-Bhf" customClass="ListViewController" customModule="services" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jpM-GO-IoY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="601"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B02-Cd-TBc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="601"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuseIdentifier" rowHeight="132" id="Kj2-S1-M1a" customClass="ChildCareTableViewCell" customModule="services" customModuleProvider="target">
@@ -254,6 +251,7 @@
                             <constraint firstAttribute="bottom" secondItem="B02-Cd-TBc" secondAttribute="bottom" id="t96-tr-xjN"/>
                             <constraint firstItem="B02-Cd-TBc" firstAttribute="top" secondItem="jpM-GO-IoY" secondAttribute="top" id="xp9-mM-Ykf"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="owv-T9-OI6"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="B02-Cd-TBc" id="xLF-SW-hxL"/>

@@ -21,22 +21,28 @@ extension UIImageView
     }
 }
 
-class ViewController: UICollectionViewController {
+class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet var imageView: UIImageView!
     
     var services: [Service] = []
     
-    let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title = "Services"
-        self.imageView.addBlurEffect()
-        layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: 190, height: 190)
-        self.collectionView?.collectionViewLayout = layout
+        //self.imageView.addBlurEffect()
+        
+        self.collectionView.backgroundColor = UIColor.clear
+        //self.collectionView.backgroundView = UIView.init(frame: CGRect.zero)
+        
+        self.collectionView.register(UINib.init(nibName: "ServiceCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ServiceCollectionViewCell")
+        
+        if let flowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            let width = (UIScreen.main.bounds.size.width/2) - 15
+            let height = (UIScreen.main.bounds.size.height/4)
+            flowLayout.itemSize = CGSize(width: width, height: height)
+        }
         
         ServicesManager.shared.getServices { (services, error) in
             self.services = services!
@@ -57,14 +63,9 @@ class ViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServiceCollectionViewCell", for: indexPath) as! ServiceCollectionViewCell
         configureCell(cell: cell, forItemAtIndexPath: indexPath)
         return cell
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let view =  collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "collectionCell", for: indexPath) as UICollectionReusableView
-        return view
     }
     
     //MARK: UICollectionViewDelegate
@@ -84,38 +85,30 @@ class ViewController: UICollectionViewController {
         self.collectionView.deselectItem(at: indexPath, animated: false)
     }
     
-    func collectionView(collectionView: UICollectionView,
+    func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
-                        insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10); //UIEdgeInsetsMake(topMargin, left, bottom, right);
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
     //MARK:- UICollectionViewDelegateFlowLayout
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return self.collectionViewLayout.collectionViewContentSize
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) ->
-        CGFloat {
-            return 30.0
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return 0
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return 0
+    }*/
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 30.0
-    }
-    
-    func configureCell(cell: UICollectionViewCell, forItemAtIndexPath: IndexPath) {
+    func configureCell(cell: ServiceCollectionViewCell, forItemAtIndexPath: IndexPath) {
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = true
-        cell.backgroundColor = UIColor(displayP3Red: 42/255.0, green: 86/255.0, blue: 130/255.0, alpha: 1.0)
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: layout.itemSize.width, height: layout.itemSize.height))
-        label.text = self.services[forItemAtIndexPath.item].name
-        label.textAlignment = .center
-        label.textColor = .white
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        label.font = UIFont.boldSystemFont(ofSize: 20.0)
-        cell.addSubview(label)
+        cell.titleLabel.text = self.services[forItemAtIndexPath.item].name
     }
 }
 

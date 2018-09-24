@@ -21,6 +21,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
+        self.tableView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        
         ServicesManager.shared.getChildCareService { (artWorks, error) in
             self.childCareService = artWorks!
             DispatchQueue.main.async {

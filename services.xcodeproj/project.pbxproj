@@ -41,6 +41,12 @@
 		7678CD5E2157752500BBA08C /* ChildCareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD5D2157752500BBA08C /* ChildCareTableViewCell.swift */; };
 		7678CD5F2157752500BBA08C /* ChildCareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD5D2157752500BBA08C /* ChildCareTableViewCell.swift */; };
 		7678CD602157752500BBA08C /* ChildCareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678CD5D2157752500BBA08C /* ChildCareTableViewCell.swift */; };
+		76ECCD8621595E46001B75F2 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECCD8421595E46001B75F2 /* ServiceCollectionViewCell.swift */; };
+		76ECCD8721595E46001B75F2 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECCD8421595E46001B75F2 /* ServiceCollectionViewCell.swift */; };
+		76ECCD8821595E46001B75F2 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECCD8421595E46001B75F2 /* ServiceCollectionViewCell.swift */; };
+		76ECCD8921595E46001B75F2 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76ECCD8521595E46001B75F2 /* ServiceCollectionViewCell.xib */; };
+		76ECCD8A21595E46001B75F2 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76ECCD8521595E46001B75F2 /* ServiceCollectionViewCell.xib */; };
+		76ECCD8B21595E46001B75F2 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76ECCD8521595E46001B75F2 /* ServiceCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +90,8 @@
 		7678CD582157595000BBA08C /* Toronto.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Toronto.gpx; sourceTree = "<group>"; };
 		7678CD59215768EA00BBA08C /* ArtworkMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkMarkerView.swift; sourceTree = "<group>"; };
 		7678CD5D2157752500BBA08C /* ChildCareTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCareTableViewCell.swift; sourceTree = "<group>"; };
+		76ECCD8421595E46001B75F2 /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		76ECCD8521595E46001B75F2 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +158,8 @@
 				7678CD582157595000BBA08C /* Toronto.gpx */,
 				7678CD59215768EA00BBA08C /* ArtworkMarkerView.swift */,
 				7678CD5D2157752500BBA08C /* ChildCareTableViewCell.swift */,
+				76ECCD8421595E46001B75F2 /* ServiceCollectionViewCell.swift */,
+				76ECCD8521595E46001B75F2 /* ServiceCollectionViewCell.xib */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -278,6 +288,7 @@
 			files = (
 				7678CD182156B84D00BBA08C /* LaunchScreen.storyboard in Resources */,
 				7678CD152156B84D00BBA08C /* Assets.xcassets in Resources */,
+				76ECCD8921595E46001B75F2 /* ServiceCollectionViewCell.xib in Resources */,
 				7678CD132156B84C00BBA08C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76ECCD8A21595E46001B75F2 /* ServiceCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76ECCD8B21595E46001B75F2 /* ServiceCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +326,7 @@
 				7678CD402156D56F00BBA08C /* ServicesManager.swift in Sources */,
 				7678CD5121574F5000BBA08C /* ListViewController.swift in Sources */,
 				7678CD5E2157752500BBA08C /* ChildCareTableViewCell.swift in Sources */,
+				76ECCD8621595E46001B75F2 /* ServiceCollectionViewCell.swift in Sources */,
 				7678CD4D21574F3A00BBA08C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76ECCD8721595E46001B75F2 /* ServiceCollectionViewCell.swift in Sources */,
 				7678CD412156D56F00BBA08C /* ServicesManager.swift in Sources */,
 				7678CD4E21574F3A00BBA08C /* MapViewController.swift in Sources */,
 				7678CD56215752ED00BBA08C /* ArtWork.swift in Sources */,
@@ -338,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76ECCD8821595E46001B75F2 /* ServiceCollectionViewCell.swift in Sources */,
 				7678CD422156D56F00BBA08C /* ServicesManager.swift in Sources */,
 				7678CD4F21574F3A00BBA08C /* MapViewController.swift in Sources */,
 				7678CD57215752ED00BBA08C /* ArtWork.swift in Sources */,
